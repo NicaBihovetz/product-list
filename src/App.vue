@@ -2,7 +2,11 @@
   <div id="app" class="productProject" v-cloak>
     <div class="productProject">
       <Forms v-model="product" @input="saveProduct"></Forms>
-      <ProductList :products="products" @editProduct="editProduct" @deleteProduct="deleteProduct"></ProductList>
+      <ProductList 
+        :products="products" 
+        @editProduct="editProduct" 
+        @deleteProduct="deleteProduct"
+      ></ProductList>
     </div>
   </div>
 </template> 
@@ -63,23 +67,19 @@ export default {
     },
 
     editProduct: function(id) {
-      // this.product = this.products.find(item => item.id === id);
       this.product = this.products.find(function(item) {
         return item.id === id;
       });
     },
 
     updateProduct: function(product) {
-      // let productId = this.products.findIndex(item => item.id === product.id);
       let productId = this.products.findIndex(function(item) {
         return item.id === product.id;
       });
-      // let productId = this.products.findIndex(function(item) { return item.id === product.id };
       this.products.splice(productId, 1, product);
     },
 
     deleteProduct: function(id) {
-      // let index = this.products.findIndex(item => item.id === id);
       let index = this.products.findIndex(function(item) {
         return item.id === id;
       });

@@ -14,7 +14,8 @@
         </label>
         <div
           class="forms__inputField__error"
-          v-if="product.name.length == 0">Поле не иожет быть пустым!</div>
+          v-if="product.name.length == 0">Поле не иожет быть пустым!
+        </div>
       </div>
     </div>
     <div class="productProject__forms">
@@ -31,7 +32,8 @@
         </label>
         <div
           class="forms__inputField__error"
-          v-if="product.quantity <= 0">Поле не может быть равно 0!</div>
+          v-if="product.quantity <= 0">Поле не может быть равно 0!
+        </div>
       </div>
     </div>
     <div class="productProject__forms">
